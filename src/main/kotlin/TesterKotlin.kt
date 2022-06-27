@@ -1,4 +1,3 @@
-import jdk.nashorn.internal.objects.NativeRegExp.test
 import java.util.Scanner
 
 fun main() {
@@ -13,8 +12,7 @@ fun main() {
 
 class TesterKotlin(val number:Int, val roundTrip:Int) {
     fun money() :Int {
-        val money = ((number * 1000) + (roundTrip * 800))
-        return money
+        return ((number * 1000) + (roundTrip * 800))
     }
     fun print() {
         println("Total tickets: $number")
