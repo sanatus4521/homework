@@ -11,13 +11,10 @@ fun main() {
 }
 
 class TesterKotlin(val number:Int, val roundTrip:Int) {
-    fun money() :Int {
-        return ((number * 1000) + (roundTrip * 800))
-    }
     fun print() {
         println("Total tickets: $number")
         println("Round-trip tickets: $roundTrip")
         println("One-way tickets: " + (number-roundTrip))
-        println("Total: ${money()}")
+        println("Total: " + ((number * 1000) + (roundTrip * 800)))
     }
 }
