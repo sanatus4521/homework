@@ -5,24 +5,19 @@ import java.util.Scanner;
 public class Tester {
     int number;
     int roundTrip;
-    int oneWay;
+    int money;
 
     public Tester(int number, int roundTrip) {
         this.number = number;
         this.roundTrip = roundTrip;
-        this.oneWay = number - roundTrip;
-    }
-
-    public int money() {
-        int money = (roundTrip * 1800) + (oneWay * 1000);
-        return money;
+        this.money = (number * 1000) + (roundTrip * 800);
     }
 
     public void print() {
         System.out.println("Total tickets: " + number);
         System.out.println("Round-trip: " + roundTrip);
-        System.out.println("One-way: " + oneWay);
-        System.out.println("Total: " + money());
+        System.out.println("One-way: " + (number - roundTrip));
+        System.out.println("Total: " + money);
     }
 
     public static void main(String[] args) {
